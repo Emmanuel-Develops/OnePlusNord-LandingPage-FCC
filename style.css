@@ -1,0 +1,222 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  --lato: "Lato", sans-serif;
+  --MT: "Montserrat", sans-serif;
+  --OP: "Open Sans", sans-serif;
+  --poppins: "Poppins", sans-serif;
+  --roboto: "Roboto", sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: var(--poppins);
+  font-size: 1rem;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  line-height: 1.4;
+}
+
+p {
+  line-height: 1;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.red-accent {
+  color: rgb(220, 12, 12);
+  /* color: teal; */
+}
+.teal-accent {
+  color: teal;
+}
+.container-fluid {
+  width: min(90%, 1200px);
+}
+.section {
+  font-size: 1em;
+  padding: 10% 0;
+}
+
+/* Header section */
+#header {
+  /* background: url("https://images.unsplash.com/photo-1498268485381-33a31f91f2c8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80"); */
+  position: relative;
+  width: 100%;
+  text-align: center;
+  height: 100%;
+  /* overflow: auto; */
+}
+
+.header-bg::before,
+.header-bg::after {
+  content: "";
+  position: absolute;
+  background: url(img/backdrop3.jpg);
+  /* background: url("https://images.unsplash.com/photo-1498268485381-33a31f91f2c8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80"); */
+  background-size: cover;
+  background-attachment: fixed;
+  /* -webkit-filter: blur(1px); */
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+.header-bg::after {
+  background: linear-gradient(0deg, rgb(0, 0, 0, 0.92) 0%, rgb(0, 0, 0, 0.2) 32%, rgb(0, 0, 0, 0.2) 32%, rgb(0, 0, 0, 0.1) 100%);
+}
+
+#header-img {
+  position: absolute;
+  width: 150px;
+  height: 60px;
+  object-fit: cover;
+  top: -10px;
+}
+
+#nav-bar {
+  position: fixed;
+  width: 100%;
+  background-color: rgb(0, 0, 0, 0.9);
+  z-index: 999;
+}
+
+.nav-item {
+  font-size: 1rem;
+}
+
+.navbar-toggler,
+.navbar-toggler:focus {
+  border: none;
+  outline: none;
+}
+
+#main-heading {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.hero {
+  color: white;
+}
+
+.bold-title {
+  font-family: var(--MT);
+  font-size: 3em;
+  font-weight: 700;
+}
+.title-notification {
+  margin: 10% 0 0;
+  width: auto;
+}
+.sub-title {
+  font-size: 1.2em;
+  font-family: var(--lato);
+  color: rgba(255, 255, 255, 0.92);
+}
+
+/* Features */
+
+#features {
+  background: rgb(0, 0, 0, 0.92);
+  color: rgb(255, 255, 255, 0.92);
+  font-size: 1em;
+}
+.nord {
+  font-size: 2.4em;
+  margin: 0 auto 0.5em;
+}
+
+.feature {
+  font-size: 1em;
+  margin-top: 2rem;
+  /* outline: 2px solid red; */
+}
+.feature-icon {
+  color: teal;
+  margin-bottom: 0.5em;
+}
+.extra-detail {
+  font-size: 0.7em;
+  font-weight: bold;
+  padding: 0.1em 0.4em;
+  /* background: rgb(221, 11, 11); */
+  color: teal;
+  background: white;
+  border-radius: 0.5em;
+}
+
+/* Review */
+#review {
+  color: rgb(0, 0, 0, 0.92);
+  background: rgb(255, 255, 255, 0.92);
+  /* background: gray; */
+}
+.iframe-wrapper {
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%;
+}
+.embedded-video {
+  position: absolute;
+  width: 100% !important;
+  height: 100%;
+  border-radius: 0.5em;
+}
+
+/* Princing */
+#pricing {
+  background: rgb(0, 0, 0, 0.92);
+}
+
+.background-slide {
+  position: absolute;
+  padding: 0;
+  margin: 0;
+  margin-top: -10%;
+  /* top: -10%; */
+  /* left: -20%; */
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  /* z-index: 999; */
+  /* background-size: cover; */
+}
+
+#contact {
+  padding: 2% 0;
+  font-size: 0.7em;
+  line-height: 1;
+  background: rgb(0, 0, 0, 0.5);
+  color: rgb(255, 255, 255, 0.92);
+  text-align: center;
+}
+
+.social-icons {
+  margin: 0 2% 2%;
+  color: rgb(255, 255, 255, 0.92);
+}
+
+@media (min-width: 768px) {
+  body {
+    font-size: 1.2rem;
+  }
+
+  .nord {
+    text-align: center;
+  }
+}
